@@ -3,8 +3,8 @@
 
 const ViewHeader = ()=>{
     return(
-        <div>
-            ViewHeader
+        <div className={""}>
+
         </div>
     );
 }
