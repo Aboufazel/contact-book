@@ -1,10 +1,10 @@
 import SearchButton from "../Button/Searchbutton";
 import "./SearchBox.style.scss"
 
-const SearchBox = ()=>{
+const SearchBox = ({manageSearch})=>{
     return(
         <div className={"SearchBox"}>
-            <SearchButton/><input placeholder={'SearchContact'}/>
+            <SearchButton/><input onChange={manageSearch} placeholder={'SearchContact'}/>
         </div>
     )
 }

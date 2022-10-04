@@ -3,7 +3,7 @@ import "./Header.style.scss"
 import AddButton from "../Button/AddButton";
 import SearchBox from "../SearchBox/SearchBox";
 
-const ViewHeader = ()=>{
+const ViewHeader = ({manageSearch})=>{
     return(
        <Container>
           <div className={"ViewHeader"}>
@@ -12,7 +12,7 @@ const ViewHeader = ()=>{
                    <h3>Contacts</h3>
                </div>
                <div className={"ViewHeader__Bottom"}>
-                   <SearchBox/>
+                   <SearchBox manageSearch={manageSearch}/>
                </div>
               <div className={"EndHeader"}/>
           </div>
