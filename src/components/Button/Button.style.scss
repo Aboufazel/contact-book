@@ -1,0 +1,14 @@
+@import "../../assets/styles/variabels";
+
+.AddButton{
+  background: $ButtonColor;
+  display: flex;
+  color: $WhiteColor;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  padding: 2px;
+  border-radius: 25%;
+  cursor: pointer;
+}

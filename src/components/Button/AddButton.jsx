@@ -1,11 +1,12 @@
+import "./Button.style.scss"
 
-
-
+import {faUserPlus} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AddButton = ()=>{
     return(
-        <div>
-            AddButton
+        <div className={"AddButton"}>
+            <FontAwesomeIcon icon={faUserPlus} />
         </div>
     )
 }
