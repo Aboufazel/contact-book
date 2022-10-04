@@ -1,12 +1,10 @@
 
 import './App.css';
-import ContactsView from "./components/Layouts/ContactsView";
-
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/routes";
 function App() {
   return (
-    <div className="App">
-       <ContactsView/>
-    </div>
+       <RouterProvider router={router}/>
   );
 }
 
