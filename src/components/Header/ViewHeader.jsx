@@ -1,13 +1,20 @@
 import Container from "../Container/Container";
 import "./Header.style.scss"
 import AddButton from "../Button/AddButton";
+import SearchBox from "../SearchBox/SearchBox";
 
 const ViewHeader = ()=>{
     return(
        <Container>
           <div className={"ViewHeader"}>
-              <AddButton/>
-              <h3>Contacts</h3>
+               <div className={"ViewHeader__top"}>
+                   <AddButton/>
+                   <h3>Contacts</h3>
+               </div>
+               <div className={"ViewHeader__Bottom"}>
+                   <SearchBox/>
+               </div>
+              <div className={"EndHeader"}/>
           </div>
        </Container>
     );

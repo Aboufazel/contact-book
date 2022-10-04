@@ -1,9 +1,10 @@
-
+import SearchButton from "../Button/Searchbutton";
+import "./SearchBox.style.scss"
 
 const SearchBox = ()=>{
     return(
-        <div>
-            SearchBox
+        <div className={"SearchBox"}>
+            <SearchButton/><input placeholder={'SearchContact'}/>
         </div>
     )
 }

@@ -1,0 +1,19 @@
+@import "../../assets/styles/variabels";
+
+
+.SearchBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 12px;
+  width: 250px;
+  height: 35px;
+  border-radius: 25px;
+  background: $SecondaryColor;
+  input{
+    border: 0;
+    outline: 0;
+    background: none;
+    margin-right: 12px;
+  }
+}

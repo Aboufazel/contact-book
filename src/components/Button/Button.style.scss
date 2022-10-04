@@ -1,7 +1,7 @@
 @import "../../assets/styles/variabels";
 
 .AddButton{
-  background: $ButtonColor;
+  background: $AddButton;
   display: flex;
   color: $WhiteColor;
   align-items: center;
@@ -10,5 +10,21 @@
   height: 35px;
   padding: 2px;
   border-radius: 25%;
+  cursor: pointer;
+}
+
+
+.SearchButton{
+  background: $ButtonColor;
+  display: flex;
+  color: $WhiteColor;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  padding: 2px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.68);
   cursor: pointer;
 }
