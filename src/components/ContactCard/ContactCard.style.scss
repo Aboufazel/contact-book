@@ -1,0 +1,46 @@
+@import "../../assets/styles/variabels";
+
+
+.ContactCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  .Card{
+    display: flex;
+    justify-content: center;
+    background: $SecondaryColor;
+    padding: 10px 8px;
+    width: 85%;
+    cursor: pointer;
+    align-items: center;
+    box-shadow: 0 0 3px 1px $SilentText;
+    border-radius: 50px;
+    margin: 8px 0;
+    .ContactAvatar{
+      display: flex;
+      margin: 0 10px 0 0;
+      padding: 7px;
+      border-radius: 50%;
+      box-shadow: 0 0 5px 1px rgba(11,27,103,1);
+      width: 35px;
+      height: 35px;
+    }
+    .ContactInfo{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding: 0 0 0 8px;
+      width: 75%;
+      .Info_name{
+        font-weight: bold;
+      }
+      .Info_tel{
+        font-weight: 500;
+        font-size: 14px;
+        color: $SilentText;
+      }
+    }
+  }
+}
