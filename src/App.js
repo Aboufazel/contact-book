@@ -1,11 +1,11 @@
 
 import './App.css';
-import ViewHeader from "./components/Header/ViewHeader";
+import ContactsView from "./components/Layouts/ContactsView";
 
 function App() {
   return (
     <div className="App">
-       <ViewHeader/>
+       <ContactsView/>
     </div>
   );
 }
