@@ -1,6 +1,7 @@
 import React , {useState} from "react";
 import "./ContactCard.style.scss"
 import {Link} from "react-router-dom";
+import EditButton from "../Button/EditButton";
 const ContactViewCard = ({search , user , setUser})=>{
 
 
@@ -17,6 +18,9 @@ const ContactViewCard = ({search , user , setUser})=>{
                           <div className={"ContactInfo"}>
                               <div className={"Info_name"}>{users.name}</div>
                               <div className={"Info_tel"}>{users.phone}</div>
+                          </div>
+                          <div>
+                              <EditButton/>
                           </div>
                       </div>
                   </Link>

@@ -1,11 +1,12 @@
 
-
+import {faUserEdit} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 const EditButton = ()=>{
     return(
-        <div>
-            EditButton
+        <div className={"editButton"}>
+            <FontAwesomeIcon icon={faUserEdit}/>
         </div>
     )
 }
