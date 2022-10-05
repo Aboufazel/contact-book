@@ -3,11 +3,11 @@ import AddForm from "../AddForm/AddForm";
 import InfoHeader from "../Header/InfoHeader";
 
 
-const ContactsAdd = ()=>{
+const ContactsAdd = ({user , setUser})=>{
     return(
         <Container>
             <InfoHeader/>
-            <AddForm/>
+            <AddForm user={user} setUser={setUser}/>
         </Container>
     )
 }

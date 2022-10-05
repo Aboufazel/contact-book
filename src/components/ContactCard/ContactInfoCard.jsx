@@ -1,10 +1,13 @@
 
 
 
-const ContactInfoCard = ()=>{
+const ContactInfoCard = ({user , setUser})=>{
+
     return(
         <div>
-            ContactInfoCard
+            <div>
+                <img src={`https://avatars.dicebear.com/api/micah/:${user.id}.svg`}/>
+            </div>
         </div>
     )
 }

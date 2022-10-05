@@ -20,10 +20,10 @@ const Root = ()=>{
                         element: <ContactsView user={user} setUser={setUser}/>,
                     },{
                         path:"contactForm",
-                        element: <ContactsAdd/>
+                        element: <ContactsAdd user={user} setUser={setUser}/>
                     },{
                         path: "contact/:contactId",
-                        element: <ContactInfo/>
+                        element: <ContactInfo user={user} setUser={setUser}/>
                     }
                 ]
             },

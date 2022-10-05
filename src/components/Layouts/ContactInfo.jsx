@@ -1,10 +1,10 @@
+import ContactInfoCard from "../ContactCard/ContactInfoCard";
 
 
-
-const ContactInfo =()=>{
+const ContactInfo =({user , setUser})=>{
     return (
         <div>
-            ContactInfo
+            <ContactInfoCard user={user} setUser={setUser}/>
         </div>
     )
 }
