@@ -28,3 +28,16 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.68);
   cursor: pointer;
 }
+
+.BackButton{
+  background: $ButtonColor;
+  display: flex;
+  color: $WhiteColor;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  padding: 2px;
+  border-radius: 25%;
+  cursor: pointer;
+}

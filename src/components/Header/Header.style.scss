@@ -26,3 +26,18 @@
     background: $SecondaryColor;
   }
 }
+
+
+.InfoHeader{
+  border-bottom:2px solid $SecondaryColor;
+  display: flex;
+  padding: 0 0 18px 0;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 0;
+  width: 100%;
+  .title{
+    font-weight: bold;
+  }
+}
