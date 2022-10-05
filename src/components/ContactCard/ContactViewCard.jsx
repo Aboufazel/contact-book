@@ -2,6 +2,7 @@ import React , {useState} from "react";
 import "./ContactCard.style.scss"
 import {Link} from "react-router-dom";
 import EditButton from "../Button/EditButton";
+import DeleteButton from "../Button/DeleteButton";
 const ContactViewCard = ({search , user , setUser})=>{
 
 
@@ -21,6 +22,9 @@ const ContactViewCard = ({search , user , setUser})=>{
                           </div>
                           <div>
                               <EditButton/>
+                          </div>
+                          <div>
+                              <DeleteButton/>
                           </div>
                       </div>
                   </Link>
