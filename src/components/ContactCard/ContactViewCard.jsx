@@ -1,5 +1,4 @@
 import React , {useState} from "react";
-import {UsersDate} from "../DataBase/UsersDate";
 import "./ContactCard.style.scss"
 import {Link} from "react-router-dom";
 const ContactViewCard = ({search , user , setUser})=>{
