@@ -54,9 +54,32 @@
 .ContactInfoCard{
   display: flex;
   justify-content: center;
+  flex-direction: column;
+
+  align-items: center;
+  .items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    gap: 8px;
+    font-weight: bold;
+    color: darkslategray;
+    padding: 15px 0 ;
+    margin: 45px 0;
+    background: $SecondaryColor;
+    color: $SilentText;
+    width: 90%;
+    box-shadow: 0 0 5px rgba(11,27,103,1);
+  }
   img{
-    width: 150px;
+    width: 65px;
     border-radius: 50%;
+    position: absolute;
+    background: white;
+    top:-55px;
+    left: 18px;
     margin: 20px 0 0 0;
     box-shadow: 0 0 5px 1px $SilentText;
   }
