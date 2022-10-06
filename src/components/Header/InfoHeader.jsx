@@ -1,24 +1,24 @@
-import Container from "../Container/Container";
-import BackButton from "../Button/Backbutton";
-import {Link} from "react-router-dom";
 import "./Header.style.scss"
+import Container from "../Container/Container";
+import {Link} from "react-router-dom";
+import BackButton from "../Button/Backbutton";
 
+const InfoHeader = () => {
+    return (
+        <Container>
+            <div className={"Info"}>
+                <div className={"backIcon"}>
+                    <div className={"Link"}>
+                        <Link to={"/"}>
+                            <BackButton/>
+                        </Link>
+                    </div>
 
-const InfoHeader = ()=>{
-    return(
-         <Container>
-             <div className={"InfoHeader"}>
-                 <div className={"title"}>
-                     Add Contacts
-                 </div>
-                 <div className={"backIcon"}>
-                     <Link to={"/"}>
-                         <BackButton/>
-                     </Link>
-                 </div>
-             </div>
-         </Container>
+                </div>
+            </div>
+        </Container>
     )
 }
 
-export default InfoHeader;
+
+export default InfoHeader

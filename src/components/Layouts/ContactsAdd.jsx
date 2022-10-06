@@ -1,12 +1,12 @@
 import Container from "../Container/Container";
 import AddForm from "../AddForm/AddForm";
-import InfoHeader from "../Header/InfoHeader";
+import AddHeader from "../Header/AddHeader";
 
 
-const ContactsAdd = ({user , setUser})=>{
+const ContactsAdd = ({user , setUser , AddContactTitle})=>{
     return(
         <Container>
-            <InfoHeader/>
+            <AddHeader title={AddContactTitle}/>
             <AddForm user={user} setUser={setUser}/>
         </Container>
     )

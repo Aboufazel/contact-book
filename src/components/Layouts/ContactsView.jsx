@@ -4,7 +4,7 @@ import ContactViewCard from "../ContactCard/ContactViewCard";
 import {useState} from "react";
 
 
-const ContactsView= ({user , setUser})=>{
+const ContactsView= ({user , setUser , ViewHeaderTitle})=>{
     const [search , setSearch] = useState('');
 
     const manageSearch = (e)=>{
@@ -12,7 +12,7 @@ const ContactsView= ({user , setUser})=>{
     }
     return(
         <Container>
-            <ViewHeader manageSearch={manageSearch}/>
+            <ViewHeader manageSearch={manageSearch} title={ViewHeaderTitle}/>
             <ContactViewCard search={search} user={user} setUser={setUser}/>
         </Container>
     )

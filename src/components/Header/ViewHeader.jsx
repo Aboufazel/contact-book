@@ -4,7 +4,7 @@ import AddButton from "../Button/AddButton";
 import SearchBox from "../SearchBox/SearchBox";
 import {Link} from "react-router-dom";
 
-const ViewHeader = ({manageSearch})=>{
+const ViewHeader = ({manageSearch , title})=>{
     return(
        <Container>
           <div className={"ViewHeader"}>
@@ -12,7 +12,7 @@ const ViewHeader = ({manageSearch})=>{
                    <Link to={"contactForm"}>
                        <AddButton/>
                    </Link>
-                   <h3>Contacts</h3>
+                   <h3>{title}</h3>
                </div>
                <div className={"ViewHeader__Bottom"}>
                    <SearchBox manageSearch={manageSearch}/>
