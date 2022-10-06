@@ -27,7 +27,7 @@ const Root = ()=>{
                         element: <ContactInfo user={user} setUser={setUser}/>
                     },{
                         path: "edit/:contactId",
-                        element: <ContactInfo user={user} setUser={setUser}/>
+                        element: <ContactsAdd user={user} setUser={setUser} AddContactTitle={title[1]}/>
                     }
                 ]
             },

@@ -1,6 +1,6 @@
 import "./Form.style.scss"
 import SaveButton from "../Button/SaveButton";
-import {useState} from "react";
+import {useState , useEffect} from "react";
 import {useParams , useNavigate} from "react-router";
 
 const AddForm = ({user , setUser}) => {
@@ -16,15 +16,24 @@ const AddForm = ({user , setUser}) => {
 
     const manageSubmit = e =>{
         e.preventDefault();
-        setUser([...user,{id:Math.floor(Math.random()*1000) ,...form}]);
-
+        if(contactId){
+            setUser(user.map(item=> item.id === form.id ? form : item))
+        }else {
+            setUser([...user,{id:Math.floor(Math.random()*1000) ,...form}]);
+        }
         emptyInput();
-        backLink('/');
+        backLink(contactId ? `/contact/${form.id}` : '/');
     }
 
     const emptyInput = () => {
         setForm({name: '', number: ''});
     }
+
+    useEffect(() => {
+        if (contactId) {
+            setForm(user.filter(item => item.id === Number(contactId))[0])
+        }
+    }, [])
         return (
         <div className={"AddForm"}>
             <form className={"form"} onSubmit={manageSubmit}>
