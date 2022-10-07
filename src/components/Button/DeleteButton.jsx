@@ -1,10 +1,10 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUserMinus} from "@fortawesome/free-solid-svg-icons";
 
-const DeleteButton = ({onClick})=>{
+const DeleteButton = ({manageDelete , id})=>{
 
     return(
-        <div className={"deleteButton"} role={"button"} onClick={()=>onClick}>
+        <div className={"deleteButton"} role={"button"} onClick={()=>manageDelete(id)}>
             <FontAwesomeIcon icon={faUserMinus}/>
         </div>
     )

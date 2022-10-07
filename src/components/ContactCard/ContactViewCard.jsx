@@ -4,11 +4,12 @@ import {Link} from "react-router-dom";
 import ShowButton from "../Button/ShowButton";
 import DeleteButton from "../Button/DeleteButton";
 
+
 const ContactViewCard = ({search, user, setUser}) => {
 
 
-    const manageDelete = () => {
-        setUser(user.filter(item => item.id !== user.id))
+    const manageDelete = (id) => {
+        setUser(user.filter(item => item.id !== id))
     }
     const handleClick = (e) => {
         e.stopPropagation();
@@ -30,9 +31,7 @@ const ContactViewCard = ({search, user, setUser}) => {
                             <ShowButton/>
                         </div>
                     </Link>
-                    <div>
-                        <DeleteButton/>
-                    </div>
+                     <DeleteButton manageDelete={manageDelete} id={users.id}/>
                 </div>
             ))
             }

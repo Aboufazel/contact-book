@@ -5,6 +5,7 @@ import ContactInfo from "../components/Layouts/ContactInfo";
 import {RouterProvider} from "react-router";
 import {useState} from "react";
 import {UsersDate} from "../components/DataBase/UsersDate";
+import WelcomePage from "../pages/WelcomePage";
 
 
 const Root = ()=>{
@@ -14,6 +15,11 @@ const Root = ()=>{
     const router = createBrowserRouter(
 
         [
+            {
+                path: "/",
+                index:true,
+                element: <WelcomePage/>,
+            },
             {path: "/",
                 children:[
                     {
