@@ -1,4 +1,4 @@
-import Logo from "../assets/pics/Logo.jpg"
+
 import "./pages.style.scss"
 import NextButton from "../components/Button/NextButton";
 import {useNavigate} from "react-router";
