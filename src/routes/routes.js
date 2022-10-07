@@ -15,15 +15,10 @@ const Root = ()=>{
     const router = createBrowserRouter(
 
         [
-            {
-                path: "/",
-                index:true,
-                element: <WelcomePage/>,
-            },
             {path: "/",
                 children:[
                     {
-                        index: true,
+                        index:true,
                         element: <ContactsView user={user} setUser={setUser} ViewHeaderTitle={title[0]}/>,
                     },{
                         path:"contactForm",

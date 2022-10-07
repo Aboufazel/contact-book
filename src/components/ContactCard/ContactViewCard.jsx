@@ -31,7 +31,9 @@ const ContactViewCard = ({search, user, setUser}) => {
                             <ShowButton/>
                         </div>
                     </Link>
-                     <DeleteButton manageDelete={manageDelete} id={users.id}/>
+                     <div>
+                         <DeleteButton manageDelete={manageDelete} id={users.id}/>
+                     </div>
                 </div>
             ))
             }
