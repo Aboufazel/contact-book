@@ -84,3 +84,28 @@
     box-shadow: 0 0 5px 1px $SilentText;
   }
 }
+
+
+
+@media screen and (min-width:1024px ){
+  .deleteMessage{
+    width: 30% !important;
+  }
+}
+.deleteMessage{
+  border: #DB3056;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #DB3056;
+  font-weight: 700;
+  font-size: 13px;
+  margin: 10px 0;
+  border-radius: 15px;
+  box-shadow: 0 0 5px #DB3056;
+  width: 80%;
+  padding: 5px 0;
+  gap: 3px;
+  height: 90px;
+}

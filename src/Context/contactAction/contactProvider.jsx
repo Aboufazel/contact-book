@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from "react";
 import {UsersDate} from "../../components/DataBase/UsersDate";
-import contactReducer from "../../Reducer/Counter.reducer";
+import contactReducer from "./contactReducer";
 
 
 export const ContactContext = createContext({
@@ -10,14 +10,13 @@ export const ContactContext = createContext({
 
 const ContactProvider = ({children}) =>{
     const [contactList ,contactDispatch ] = useReducer(
-        contactReducer,
-        UsersDate,
+        contactReducer , [UsersDate]
     );
     return(
         <ContactContext.Provider
           value={{
               contactList,
-              contactDispatch
+              contactDispatch,
           }}
         >
             {children}

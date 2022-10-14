@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import "./ContactCard.style.scss"
 import {Link} from "react-router-dom";
 import ShowButton from "../Button/ShowButton";
 import DeleteButton from "../Button/DeleteButton";
 
-
 const ContactViewCard = ({search, user, setUser}) => {
+
 
 
     const manageDelete = (id) => {
