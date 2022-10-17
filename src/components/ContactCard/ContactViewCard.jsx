@@ -3,24 +3,22 @@ import "./ContactCard.style.scss"
 import {Link} from "react-router-dom";
 import ShowButton from "../Button/ShowButton";
 import DeleteButton from "../Button/DeleteButton";
+import { useDispatch, useSelector } from "react-redux";
 
-const ContactViewCard = ({search, user, setUser}) => {
+const ContactViewCard = () => {
 
-
-
-    const manageDelete = (id) => {
-        setUser(user.filter(item => item.id !== id))
-    }
+    const showContact = useSelector (state => state.action)
+    
     const handleClick = (e) => {
         e.stopPropagation();
     };
     return (
         <div className={"ContactCard"}>
-            {user.filter(filters => filters.name.toUpperCase().includes(search.toUpperCase())).map(users => (
+            {showContact.map(users => (
 
                 <div className={"Card"} key={users.id} role={"button"} onClick={handleClick}>
                     <div className={"ContactAvatar"}>
-                        <img src={`https://avatars.dicebear.com/api/micah/:${users.id}.svg`}/>
+                    <img src={`https://avatars.dicebear.com/api/micah/:${users.id}.svg`}/>
                     </div>
                     <div className={"ContactInfo"}>
                         <div className={"Info_name"}>{users.name}</div>
@@ -32,7 +30,7 @@ const ContactViewCard = ({search, user, setUser}) => {
                         </div>
                     </Link>
                      <div>
-                         <DeleteButton manageDelete={manageDelete} id={users.id}/>
+                         <DeleteButton id={users.id}/>
                      </div>
                 </div>
             ))

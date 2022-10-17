@@ -2,16 +2,24 @@ import "./Form.style.scss"
 import SaveButton from "../Button/SaveButton";
 import {useState , useEffect} from "react";
 import {useParams , useNavigate} from "react-router";
+import {addContact} from '../../Redux/Reducers/contactSlice/contact.slice'
+import { useDispatch, useSelector } from "react-redux";
 
 const AddForm = ({user , setUser}) => {
     const {contactId} = useParams();
-    const backLink = useNavigate()
+    const backLink = useNavigate();
+    
+
+    const state = useSelector (state => state.action);
+    console.log(state);
+    const dispatch = useDispatch();
+
     const [form , setForm] = useState([
         {id:Math.floor(Math.random()*1000) , name:"" , phone:""},
     ])
     const manageChange = e => {
         setForm({...form, [e.target.name]: e.target.value});
-        console.log(form);
+        
     }
 
     const manageSubmit = e =>{
@@ -19,7 +27,9 @@ const AddForm = ({user , setUser}) => {
         if(contactId){
             setUser(user.map(item=> item.id === form.id ? form : item))
         }else {
-            setUser([...user,{id:Math.floor(Math.random()*1000) ,...form}]);
+            //setUser([...user,{id:Math.floor(Math.random()*1000) ,...form}]);
+            dispatch(addContact(state));
+            
         }
         emptyInput();
         backLink(contactId ? `/contact/${form.id}` : '/');

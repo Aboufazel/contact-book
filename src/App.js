@@ -1,12 +1,14 @@
 
 import './App.css';
 import Root from "./routes/routes";
-import ContactProvider from "./Context/contactAction/contactProvider";
+import {store} from './Redux/Store';
+import { Provider } from 'react-redux';
 function App() {
   return (
-       <ContactProvider>
+
+       <Provider store = {store}>
          <Root/>
-       </ContactProvider>
+       </Provider>
   );
 }
 
