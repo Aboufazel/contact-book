@@ -11,7 +11,6 @@ const AddForm = ({user , setUser}) => {
     
 
     const state = useSelector (state => state.action);
-    console.log(state);
     const dispatch = useDispatch();
 
     const [form , setForm] = useState([
