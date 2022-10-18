@@ -9,7 +9,7 @@ import {UsersDate} from "../components/DataBase/UsersDate";
 
 const Root = ()=>{
     const [user , setUser] = useState(UsersDate);
-    const title = ["Contacts" , "AddContact"]
+    const title = {title:"Contacts" , add: "AddContact"}
 
     const router = createBrowserRouter(
 
@@ -18,16 +18,16 @@ const Root = ()=>{
                 children:[
                     {
                         index:true,
-                        element: <ContactsView user={user} setUser={setUser} ViewHeaderTitle={title[0]}/>,
+                        element: <ContactsView user={user} setUser={setUser} ViewHeaderTitle={title.title}/>,
                     },{
                         path:"contactForm",
-                        element: <ContactsAdd user={user} setUser={setUser} AddContactTitle={title[1]}/>
+                        element: <ContactsAdd user={user} setUser={setUser} AddContactTitle={title.add}/>
                     },{
                         path: "contact/:contactId",
                         element: <ContactInfo user={user} setUser={setUser}/>
                     },{
                         path: "edit/:contactId",
-                        element: <ContactsAdd user={user} setUser={setUser} AddContactTitle={title[1]}/>
+                        element: <ContactsAdd user={user} setUser={setUser} AddContactTitle={title.add}/>
                     }
                 ]
             },
