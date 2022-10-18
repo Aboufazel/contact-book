@@ -9,20 +9,21 @@ export const contactSlice = createSlice({
     initialState,
     reducers:{
       deleteContact : ( state, action) =>{
-        const contact = state.indexOf(item => item.id === action.payload);
-        state.splice(contact , 1);
+        const contact = state.findIndex(item=>item.id===action.payload)
+            state.splice(contact,1)
       },
         addContact : (state , action) =>{
-          state.push(action.payload)
+          state.push( action.payload)
         },
         editContact : (state, action) =>{
-            state = state.map(item => item.id === action.payload ? action.payload :item)
+          const index=state.findIndex(item=>item.id===action.payload.id)
+          state[index]=action.payload
         }
     }
 })
 
 
-export const { deleteContact  , addContact} = contactSlice.actions
+export const { deleteContact  , addContact , editContact} = contactSlice.actions
 
 export default contactSlice.reducer;
 

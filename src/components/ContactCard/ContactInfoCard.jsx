@@ -3,10 +3,13 @@ import "./ContactCard.style.scss"
 import {Link, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import EditButton from "../Button/EditButton";
+import { useSelector } from "react-redux";
 
-const ContactInfoCard = ({user , setUser})=>{
+const ContactInfoCard = ()=>{
     const [contact, setContact] = useState({})
     const {contactId} = useParams()
+
+    const user = useSelector (state => state.action)
 
     useEffect(() => {
         const currentContact = user.filter( item => item.id === Number(contactId))[0]

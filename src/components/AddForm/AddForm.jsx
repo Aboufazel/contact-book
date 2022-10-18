@@ -2,10 +2,11 @@ import "./Form.style.scss"
 import SaveButton from "../Button/SaveButton";
 import {useState , useEffect} from "react";
 import {useParams , useNavigate} from "react-router";
-import {addContact} from '../../Redux/Reducers/contactSlice/contact.slice'
+import {addContact, editContact} from '../../Redux/Reducers/contactSlice/contact.slice'
 import { useDispatch, useSelector } from "react-redux";
 
 const AddForm = ({user , setUser}) => {
+
     const {contactId} = useParams();
     const backLink = useNavigate();
     
@@ -24,11 +25,10 @@ const AddForm = ({user , setUser}) => {
     const manageSubmit = e =>{
         e.preventDefault();
         if(contactId){
-            setUser(user.map(item=> item.id === form.id ? form : item))
+            dispatch(editContact(form));
         }else {
             //setUser([...user,{id:Math.floor(Math.random()*1000) ,...form}]);
-            dispatch(addContact(state));
-            
+            dispatch (addContact({id:Math.floor(Math.random()*1000) , ...form }))
         }
         emptyInput();
         backLink(contactId ? `/contact/${form.id}` : '/');
