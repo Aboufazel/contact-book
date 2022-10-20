@@ -5,7 +5,7 @@ import {useParams , useNavigate} from "react-router";
 import {addContact, editContact} from '../../Redux/Reducers/contactSlice/contact.slice'
 import { useDispatch, useSelector } from "react-redux";
 
-const AddForm = ({user , setUser}) => {
+const AddForm = () => {
 
     const {contactId} = useParams();
     const backLink = useNavigate();
@@ -29,6 +29,7 @@ const AddForm = ({user , setUser}) => {
         }else {
             //setUser([...user,{id:Math.floor(Math.random()*1000) ,...form}]);
             dispatch (addContact({id:Math.floor(Math.random()*1000) , ...form }))
+
         }
         emptyInput();
         backLink(contactId ? `/contact/${form.id}` : '/');
@@ -40,7 +41,7 @@ const AddForm = ({user , setUser}) => {
 
     useEffect(() => {
         if (contactId) {
-            setForm(user.filter(item => item.id === Number(contactId))[0])
+            setForm(state.filter(item => item.id === Number(contactId))[0])
         }
     }, [])
         return (

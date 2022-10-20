@@ -5,11 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 import {deleteContact} from '../../Redux/Reducers/contactSlice/contact.slice'
 
 const DeleteButton = ()=>{
-    
     const dispatch = useDispatch();
 
     const manageDelete = (id) =>{
-        dispatch(deleteContact(id));
+       dispatch(deleteContact(id));
     }
 
     return(

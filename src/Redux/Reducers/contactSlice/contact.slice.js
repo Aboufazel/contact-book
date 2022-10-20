@@ -13,11 +13,13 @@ export const contactSlice = createSlice({
             state.splice(contact,1)
       },
         addContact : (state , action) =>{
-          state.push( action.payload)
+          state.push( action.payload);
+           alert("New contact Add")
         },
         editContact : (state, action) =>{
           const index=state.findIndex(item=>item.id===action.payload.id)
-          state[index]=action.payload
+          state[index]=action.payload;
+            alert("Contact Edit")
         }
     }
 })
