@@ -1,13 +1,13 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUserMinus} from "@fortawesome/free-solid-svg-icons";
 import "./Button.style.scss"
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import {deleteContact} from '../../Redux/Reducers/contactSlice/contact.slice'
 
-const DeleteButton = ()=>{
+const DeleteButton = (id)=>{
     const dispatch = useDispatch();
 
-    const manageDelete = (id) =>{
+    const manageDelete = id =>{
        dispatch(deleteContact(id));
     }
 

@@ -9,7 +9,8 @@ export const contactSlice = createSlice({
     initialState,
     reducers:{
       deleteContact : ( state, action) =>{
-        const contact = state.findIndex(item=>item.id===action.payload)
+          const {payload} = action
+        const contact = state.findIndex(item=>item.id===payload)
             state.splice(contact,1)
       },
         addContact : (state , action) =>{

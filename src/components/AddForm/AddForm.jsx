@@ -25,14 +25,18 @@ const AddForm = () => {
     const manageSubmit = e =>{
         e.preventDefault();
         if(contactId){
-            dispatch(editContact(form));
+        dispatch(editContact(form));
+       // backLink(`/contact/${form.id}`)
+
         }else {
             //setUser([...user,{id:Math.floor(Math.random()*1000) ,...form}]);
             dispatch (addContact({id:Math.floor(Math.random()*1000) , ...form }))
-
+     //       backLink('/');
+      //      emptyInput();
         }
+
+        backLink( '/');
         emptyInput();
-        backLink(contactId ? `/contact/${form.id}` : '/');
     }
 
     const emptyInput = () => {
@@ -44,6 +48,13 @@ const AddForm = () => {
             setForm(state.filter(item => item.id === Number(contactId))[0])
         }
     }, [])
+
+    useEffect(()=>{
+        return () => {
+            emptyInput()
+        }
+    },[])
+
         return (
         <div className={"AddForm"}>
             <form className={"form"} onSubmit={manageSubmit}>
