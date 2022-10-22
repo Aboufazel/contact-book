@@ -11,7 +11,8 @@ export const contactSlice = createSlice({
       deleteContact : ( state, action) =>{
           const {payload} = action
         const contact = state.findIndex(item=>item.id===payload)
-            state.splice(contact,1)
+          state.splice(contact,1)
+          alert("contact delete complete")
       },
         addContact : (state , action) =>{
           state.push( action.payload);

@@ -25,8 +25,7 @@ const AddForm = () => {
     const manageSubmit = e =>{
         e.preventDefault();
         if(contactId){
-            console.log("edit")
-        //dispatch(editContact(form));
+        dispatch(editContact(form));
         backLink('/')
 
         }else {
