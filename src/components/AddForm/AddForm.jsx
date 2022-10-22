@@ -1,7 +1,7 @@
 import "./Form.style.scss"
 import SaveButton from "../Button/SaveButton";
 import {useState , useEffect} from "react";
-import {useParams , useNavigate} from "react-router";
+import {useParams , useNavigate} from "react-router-dom";
 import {addContact, editContact} from '../../Redux/Reducers/contactSlice/contact.slice'
 import { useDispatch, useSelector } from "react-redux";
 
@@ -25,18 +25,17 @@ const AddForm = () => {
     const manageSubmit = e =>{
         e.preventDefault();
         if(contactId){
-        dispatch(editContact(form));
-       // backLink(`/contact/${form.id}`)
+            console.log("edit")
+        //dispatch(editContact(form));
+        backLink('/')
 
         }else {
             //setUser([...user,{id:Math.floor(Math.random()*1000) ,...form}]);
             dispatch (addContact({id:Math.floor(Math.random()*1000) , ...form }))
-     //       backLink('/');
-      //      emptyInput();
+             backLink('/');
+             emptyInput();
         }
 
-        backLink( '/');
-        emptyInput();
     }
 
     const emptyInput = () => {

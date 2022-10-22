@@ -4,10 +4,10 @@ import "./Button.style.scss"
 import { useDispatch} from "react-redux";
 import {deleteContact} from '../../Redux/Reducers/contactSlice/contact.slice'
 
-const DeleteButton = (id)=>{
+const DeleteButton = ({id})=>{
     const dispatch = useDispatch();
 
-    const manageDelete = id =>{
+    const manageDelete = () =>{
        dispatch(deleteContact(id));
     }
 
